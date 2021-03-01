@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: Rubik, serif;
   font-weight: 300;
-  
+  font-size: 100%;
 }
 
 a {
@@ -106,8 +106,10 @@ h1 {
 
 #drivers {
   list-style-type: none;
+  font-size: 140%;
   padding: 0 0 0 0;
   margin: 5% 0 0 0;
+
 }
 
 #drivers li {
@@ -120,13 +122,20 @@ h1 {
   float:left;
 }
 
-.NameTeam {
+.nameTeam {
   float: left;
   margin: 0 0 0 2%;
   font-size: 1.5em;
 }
 
-.NameTeam .driverName {
-  margin-top: 0;
+.nameTeam .driverName {
+  margin: 0 0 1% 0;
 }
 
+.nameTeam .driverTeam {
+  margin: 0% 0 0 0;
+}
+
+.nameTeam label {
+  font-weight: 500;
+}
