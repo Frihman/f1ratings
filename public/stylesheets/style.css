@@ -25,13 +25,7 @@ header h1 {
   font-weight: 500;
 }
 
-#content {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #fafafa;
-}
-
-#content h1 {
+h1 {
   font-weight: 500;
   margin: 0% 0% 0% 0%;
 }
@@ -78,6 +72,7 @@ header h1 {
   padding-top: 1%;
   border-radius: 0px 0px 8px 8px;
   margin: 0 auto;
+  margin-bottom: 3%;
   border: 1px solid #adadad;
   overflow: hidden;
 }
@@ -104,9 +99,34 @@ header h1 {
 }
 
 #ratings {
-  width: 100%;
+  width: 92%;
   height: 500px;
   margin: 0 auto;
-  border-left: 1px solid #adadad;
-  border-right: 1px solid #adadad;
 }
+
+#drivers {
+  list-style-type: none;
+  padding: 0 0 0 0;
+  margin: 5% 0 0 0;
+}
+
+#drivers li {
+  overflow: hidden;
+  margin: 0 0 5% 0;
+}
+
+#drivers li img {
+  width: 15%;
+  float:left;
+}
+
+.NameTeam {
+  float: left;
+  margin: 0 0 0 2%;
+  font-size: 1.5em;
+}
+
+.NameTeam .driverName {
+  margin-top: 0;
+}
+

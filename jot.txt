@@ -1,0 +1,7 @@
+---Structure for driver database---
+Id
+FirstName
+LastName
+Team
+Img
+Stats [Starts: , Dnfs: , Top10: , Podiums: , Wins: , Points: , Ratings[]: , ]
