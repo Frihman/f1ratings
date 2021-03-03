@@ -6,7 +6,7 @@ var raceSchema = require('../raceSchema.js');
 var Race = mongoose.model('Race', raceSchema);
 
 /* POST from form */
-router.post('/', function(req, res, next) {
+router.put('/', function(req, res, next) {
   res.redirect('/');
 });
 

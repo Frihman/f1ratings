@@ -27,6 +27,7 @@ mongoose.connection.on('connected', () => {
     Circuit: 'Sakhir International Circuit',
     StartTime: '2020-03-28T16:00:00Z',
     Round: '1',
+    Img: 'images/Bahrain.png',
     Ratings: [
       {Driver: '14', Rating: '6', DOTD: 'false'},
       {Driver: '77', Rating: '5', DOTD: 'false'},

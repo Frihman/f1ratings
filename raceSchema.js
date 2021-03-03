@@ -19,6 +19,9 @@ const raceSchema = new mongoose.Schema({
     Round: {
         type: String
     },
+    Img: {
+        type: String
+    },
     Ratings: [
         {
             Driver: {

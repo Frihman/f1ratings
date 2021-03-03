@@ -17,7 +17,17 @@ const driverSchema = new mongoose.Schema({
         type: String
     },
     Ratings: [
-
+        {
+            Round: {
+                type: String
+            },
+            Rating: {
+                type: String
+            },
+            DOTD: {
+                type: String
+            }
+        }
     ]
 });
 
