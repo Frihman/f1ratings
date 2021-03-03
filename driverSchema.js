@@ -7,6 +7,9 @@ const driverSchema = new mongoose.Schema({
     LastName: {
         type: String
     },
+    Number: {
+        type: String
+    },
     Team: {
         type: String
     },

@@ -9,7 +9,7 @@ function Init() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             drivers = JSON.parse(xhr.response);
             console.log(drivers);
-
+            
             displayContent();
         }
     }
