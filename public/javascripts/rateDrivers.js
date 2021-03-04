@@ -84,10 +84,10 @@ function Init() {
                 <p class='driverTeam'>${drivers[i].Team}</p>
                 <hr>
                 <label>DOTD</label>
-                <input type='radio' name='DOTD' value='${drivers[i]._id}'>
+                <input type='radio' name='DOTD' value='${drivers[i].Number}'>
                 <br>
                 <label>Rating</label>
-                <select id='driverRating${drivers[i]._id}' name='driverRating${i}'>
+                <select id='driverRating${drivers[i].Number}' name='driverRating${drivers[i].Number}'>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
@@ -108,11 +108,5 @@ function Init() {
         
     }
 }
-
-
-
-
-
-
 
 window.onload = Init();

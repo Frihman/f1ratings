@@ -6,14 +6,32 @@ var raceSchema = require('../raceSchema.js');
 var Race = mongoose.model('Race', raceSchema);
 
 /* POST from form */
-router.put('/', function(req, res, next) {
-  res.redirect('/');
+router.post('/:id', function(req, res, next) {
+    var DOTD = req.body.DOTD;
+
+    var drivers = req.body;
+
+    
+    for( var i = 0; i < drivers.length; i++){ 
+    
+        if ( drivers[i] === DOTD) { 
+    
+            drivers.splice(i, 1); 
+        }
+    
+    }
+    
+    //for(i = 0; )
+    
+    //Race.updateOne({Round: req.params.id}, {Ratings: []})
+
+    res.send(drivers);
 });
 
 router.get('/', function(req, res, next) {
-  Race.find({}, function (err, data) {
-    res.send(data);
-  });
+    Race.find({}, function (err, data) {
+        res.send(data);
+    });
 });
 
 router.get('/:id', function(req, res, next) {
