@@ -78,7 +78,7 @@ function Init() {
         
                 li.innerHTML = 
                 `
-                <img class='driverImg' src='/images/daniel-ricciardo.webp'>
+                <img class='driverImg' src='${drivers[i].Img}'>
                 <div class='nameTeam'>
                 <p class='driverName'>${i + 1}. ${drivers[i].FirstName} ${drivers[i].LastName}</p>
                 <p class='driverTeam'>${drivers[i].Team}</p>

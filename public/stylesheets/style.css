@@ -38,12 +38,14 @@ h1 {
 
 #races {
   padding: 0;
+  margin: 0 auto;
   margin-top: 2%;
+  
 }
 
 .race {
   background-color:#e6e6e6;;
-  width: 90%;
+  width: 100%;
   height: 50%;
   padding: 2%;
   padding-bottom: 1%;
@@ -54,6 +56,7 @@ h1 {
   margin-bottom: 3%;
   border: 1px solid #adadad;
   overflow: hidden;
+
 }
 
 .race h2 {
