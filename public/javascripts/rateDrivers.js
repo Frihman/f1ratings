@@ -87,17 +87,17 @@ function Init() {
                 <input type='radio' name='DOTD' value='${drivers[i].Number}'>
                 <br>
                 <label>Rating</label>
-                <select id='driverRating${drivers[i].Number}' name='driverRating${drivers[i].Number}'>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9</option>
-                <option value='10'>10</option>
+                <select id='driverRating' name='driverRating'>
+                <option value='1_${drivers[i].Number}'>1</option>
+                <option value='2_${drivers[i].Number}'>2</option>
+                <option value='3_${drivers[i].Number}'>3</option>
+                <option value='4_${drivers[i].Number}'>4</option>
+                <option value='5_${drivers[i].Number}'>5</option>
+                <option value='6_${drivers[i].Number}'>6</option>
+                <option value='7_${drivers[i].Number}'>7</option>
+                <option value='8_${drivers[i].Number}'>8</option>
+                <option value='9_${drivers[i].Number}'>9</option>
+                <option value='10_${drivers[i].Number}'>10</option>
                 </select>
                 </div>
                 `;

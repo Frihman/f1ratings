@@ -1,19 +1,19 @@
 extends layout
 
 block content
-  div#content
-    div#race
-        //img(src='images/bh-flag.webp')
-        //div#raceInfo
-            h2 Bahrain Grand Prix
-            p Sakhir
-            p Sakhir International Circuit
-            p 19:00
-    #ratings 
-      h1 Driver Ratings
-      form(action='/races/' + id, method='POST')
-        ul#drivers
-        input(type='submit', value='Submit')
+  
+  div#race
+      //img(src='images/bh-flag.webp')
+      //div#raceInfo
+          h2 Bahrain Grand Prix
+          p Sakhir
+          p Sakhir International Circuit
+          p 19:00
+  #ratings 
+    h1 Driver Ratings
+    form(action='/races/' + id, method='POST')
+      ul#drivers
+      input(type='submit', value='Submit')
 
 
 

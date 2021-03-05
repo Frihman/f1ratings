@@ -5,9 +5,9 @@ body {
   font-weight: 300;
   font-size: 100%;
 }
-
 a {
-  color: #00B7FF;
+  color: black;
+  text-decoration: none;
 }
 
 header {
@@ -30,11 +30,53 @@ h1 {
   margin: 0% 0% 0% 0%;
 }
 
+#content {
+  width: 90.2%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+#races {
+  padding: 0;
+  margin-top: 2%;
+}
+
+.race {
+  background-color:#e6e6e6;;
+  width: 90%;
+  height: 50%;
+  padding: 2%;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  border-radius: 0px 0px 8px 8px;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  border: 1px solid #adadad;
+  overflow: hidden;
+}
+
+.race h2 {
+  margin-bottom: 2%;
+}
+
+.race p {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.race img {
+  width: clamp(220px, 20%, 1000px);
+  float: right;
+  border-radius: 0px 0px 8px 0px;
+  border: 1px solid black;
+}
+
 /** NavBar **/
 
 #navBar {
   /** margin: 0% 0% 0% 0%; */
-  margin-top: clamp(24px, 1.7%, 50px);
+  margin-top: clamp(24px, 1.7%, 24px);
   margin-left: -0.5%;
 }
 

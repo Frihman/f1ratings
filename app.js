@@ -21,34 +21,15 @@ mongoose.connection.on('connected', () => {
   /**
   var Race = mongoose.model('Race', raceSchema);
   Race.create({
-    Name: 'Bahrain Grand Prix',
-    Country: 'Bahrain',
-    City: 'Sakhir',
-    Circuit: 'Sakhir International Circuit',
-    StartTime: '2020-03-28T16:00:00Z',
-    Round: '1',
-    Img: 'images/Bahrain.png',
+    Name: 'Austrian Grand Prix',
+    Country: 'Austria',
+    City: 'Spielberg',
+    Circuit: 'Red Bull Ring',
+    StartTime: '2020-07-04T14:00:00Z',
+    Round: '9',
+    Img: 'images/Austria.png',
     Ratings: [
-      {Driver: '14', Rating: '6', DOTD: 'false'},
-      {Driver: '77', Rating: '5', DOTD: 'false'},
-      {Driver: '10', Rating: '7', DOTD: 'false'},
-      {Driver: '99', Rating: '5', DOTD: 'false'},
-      {Driver: '44', Rating: '8', DOTD: 'false'},
-      {Driver: '6', Rating: '6', DOTD: 'false'},
-      {Driver: '16', Rating: '9', DOTD: 'true'},
-      {Driver: '9', Rating: '5', DOTD: 'false'},
-      {Driver: '4', Rating: '7', DOTD: 'false'},
-      {Driver: '31', Rating: '8', DOTD: 'false'},
-      {Driver: '11', Rating: '7', DOTD: 'false'},
-      {Driver: '7', Rating: '6', DOTD: 'false'},
-      {Driver: '3', Rating: '8', DOTD: 'false'},
-      {Driver: '63', Rating: '5', DOTD: 'false'},
-      {Driver: '55', Rating: '5', DOTD: 'false'},
-      {Driver: '47', Rating: '7', DOTD: 'false'},
-      {Driver: '18', Rating: '6', DOTD: 'false'},
-      {Driver: '22', Rating: '9', DOTD: 'false'},
-      {Driver: '33', Rating: '8', DOTD: 'false'},
-      {Driver: '5', Rating: '6', DOTD: 'false'},
+      
     ]
   });
   */
