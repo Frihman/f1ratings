@@ -2,7 +2,9 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var raceSchema = require('../raceSchema.js');
+var driverSchema = require('../driverSchema.js');
 
+var Driver = mongoose.model('Driver', driverSchema);
 var Race = mongoose.model('Race', raceSchema);
 
 /* POST from form */
@@ -42,9 +44,16 @@ router.post('/:id', function(req, res, next) {
     }
     
     Race.updateOne({Round: req.params.id}, {Ratings: drivers}, function(err) {
-        res.redirect('/');
+        updateDriverRatings();
     });
 
+    function updateDriverRatings() {
+        for(let i = 0; i < 20; i++) {
+            Driver.updateOne({Number: req.body.driverRating[i].split('_').pop()}, {$push: {Ratings: {Round: req.params.id, Rating: req.body.driverRating[i].split('_').shift(), DOTD: 'false'}} });
+        }
+        res.redirect('/');
+        
+    }
     
 });
 
