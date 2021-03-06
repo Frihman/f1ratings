@@ -41,8 +41,11 @@ function Init() {
         pCircuit.innerHTML = raceInfo[0].Circuit;
         divRaceInfo.appendChild(pCircuit);
         
+        var startTime = raceInfo[0].StartTime.split('T');
+        startTime[1] = startTime[1].slice(0, -4);
+        
         var pStart = document.createElement('p')
-        pStart.innerHTML = raceInfo[0].StartTime;
+        pStart.innerHTML = `${startTime[0]} <b>${startTime[1]}</b>`;
         divRaceInfo.appendChild(pStart);
 
         divRace.appendChild(divRaceInfo);

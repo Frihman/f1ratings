@@ -17,6 +17,9 @@ function Init() {
         
         for (let i = 0; i < raceInfo.length; i++) {
             var a = document.createElement('a');
+            var startTime = raceInfo[i].StartTime.split('T');
+            startTime[1] = startTime[1].slice(0, -4);
+
             a.href = `/rate_drivers/${raceInfo[i].Round}`;
 
             var li = document.createElement('li');
@@ -27,7 +30,7 @@ function Init() {
             <h2>${raceInfo[i].Name}</h2>
             <p>${raceInfo[i].City}</p>
             <p>${raceInfo[i].Circuit}</p>
-            <p>${raceInfo[i].StartTime}</p>
+            <p>${startTime[0]} <b>${startTime[1]}</b></p>
             </div>
             `;
 
