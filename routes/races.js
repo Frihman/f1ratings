@@ -10,6 +10,7 @@ var Race = mongoose.model('Race', raceSchema);
 /* POST from form */
 router.post('/:id', function(req, res, next) {
     var DOTD = req.body.DOTD;
+    var id = parseInt(req.params.id);
 
     var drivers = [
       {Driver: '14', Rating: '6', DOTD: 'false'},
@@ -33,28 +34,34 @@ router.post('/:id', function(req, res, next) {
       {Driver: '33', Rating: '8', DOTD: 'false'},
       {Driver: '5', Rating: '6', DOTD: 'false'}
     ];
-    
-    for(let i = 0; i < 20; i++) {
-        drivers[i].Driver = req.body.driverRating[i].split('_').pop();
-        drivers[i].Rating = req.body.driverRating[i].split('_').shift();
 
-        if(DOTD == drivers[i].Driver) {
-            drivers[i].DOTD = 'true';
+    var driversList = [];
+
+    Driver.find({}, function(err, data) {
+        driversList = data;
+        console.log(driversList[0].Ratings);
+
+        for(let i = 0; i < 20; i++) {
+            drivers[i].Driver = req.body.driverRating[i].split('_').pop();
+            drivers[i].Rating = req.body.driverRating[i].split('_').shift();
+    
+            if(driversList[i].Ratings.length < id) {
+                Driver.updateOne({Number: req.body.driverRating[i].split('_').pop()}, {$push: {Ratings: {Round: req.params.id, Rating: req.body.driverRating[i].split('_').shift(), DOTD: 'false'}}}, function(err) {
+                    console.log('added');
+                });
+            }
+    
+            if(DOTD == drivers[i].Driver) {
+                drivers[i].DOTD = 'true';
+            }
         }
-    }
+    });
+    
+    
     
     Race.updateOne({Round: req.params.id}, {Ratings: drivers}, function(err) {
-        updateDriverRatings();
-    });
-
-    function updateDriverRatings() {
-        for(let i = 0; i < 20; i++) {
-            Driver.updateOne({Number: req.body.driverRating[i].split('_').pop()}, {$push: {Ratings: {Round: req.params.id, Rating: req.body.driverRating[i].split('_').shift(), DOTD: 'false'}} });
-        }
         res.redirect('/');
-        
-    }
-    
+    });
 });
 
 router.get('/', function(req, res, next) {
